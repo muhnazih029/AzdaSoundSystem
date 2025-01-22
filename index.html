@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZDA</title>
+    <link rel="stylesheet" href="assets/styles/app.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 5.15.4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <header>
+        <div class="jumbotron">
+            <h1>AZDA</h1>
+            <p>Perusahaan Penyewaan Sound Kota Rembang</p>
+        </div>
+        <nav class="navbar-container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="image-section">
+            <img src="assets/image/wedding.jpg" alt="Sound System" />
+        </section>
+        <div class="content" id="about">
+            <article class="first-article">
+                <img src="assets/image/stage.jpg" alt="AZDA">
+                <div class="article-text">
+                    <h2>About AZDA</h2>
+                    <p>AZDA adalah tempat untuk sewa sound system yang terpercaya di Desa Waru, Rembang, Jawa Tengah.
+                        Kami akan membantu Anda dalam menyediakan sound system di berbagai acara seperti pernikahan,
+                        dangdut, pengajian dan acara lainnya.</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="carousel-container" id="services">
+            <h2>Available Packages</h2>
+            <div class="carousel-wrapper">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="carousel">
+                    <div class="carousel-item" onclick="openAside('Basic Sound Package')">
+                        <img src="assets/image/basic.jpg" alt="Basic Package">
+                        <p>Basic Sound Package</p>
+                    </div>
+                    <div class="carousel-item" onclick="openAside('Premium Sound Package')">
+                        <img src="assets/image/premium.jpg" alt="Premium Package">
+                        <p>Premium Sound Package</p>
+                    </div>
+                    <div class="carousel-item" onclick="openAside('Wedding Sound Package')">
+                        <img src="assets/image/wedding.jpg" alt="Wedding Package">
+                        <p>Wedding Sound Package</p>
+                    </div>
+                </div>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+
+        <aside class="booking-form" id="bookingForm">
+            <h2>Paket Sewa</h2>
+            <img id="aside-image" src="" alt="Package Image">
+            <form id="booking">
+                <label for="name">Nama</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama anda" required>
+
+                <label for="package">Nama Paket</label>
+                <input type="text" id="package" name="package" disabled>
+
+                <label for="location">Lokasi Event</label>
+                <input id="location" name="location" placeholder="Masukkan detail lokasi acara" required>
+
+                <button type="button" onclick="sendToWhatsApp()">Kirim</button>
+                <button onclick="closeAside()">Tutup</button>
+            </form>
+        </aside>
+        <button id="scrollToTop" class="scroll-to-top">&Lambda;</button>
+    </main>
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="map-container">
+                <h3>Lokasi Kami</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15888.572637029668!2d106.7852048!3d-6.2035865!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e41918b678be7ab%3A0xaab1ac0f1d3d9ffb!2sTangerang%2C%20Banten!5e0!3m2!1sen!2sid!4v1635293482097!5m2!1sen!2sid"
+                    width="100%" height="300" style="border:0;" loading="lazy">
+                </iframe>
+            </div>
+            <div class="contact-info">
+                <h2>Hubungi Kami</h2>
+                <p>Jika ingin menyewa hubungi kontak di bawah ini:</p>
+                <p><strong>Email:</strong> azdasound@gmail.com</p>
+                <p><strong>Telepon:</strong> +628123456789</p>
+                <div class="social-media">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p>&#169; 2024 AZDA Sound System</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
